@@ -1,0 +1,53 @@
+/* Resets and Variables */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #DAFFFB;
+  --main-text: #04364A;
+  --border: #64CCC5;
+  --box-fill: #176B87;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-text);
+  font-weight: 800;
+  font-size: 75px;
+}
+
+/* Container / Game Element */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.game-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-board {
+  width: 65vh;
+  min-height: 75vh;
+  background-color: white;
+  align-self: center;
+}
+
+/* Options */
+
+/* Footer */
