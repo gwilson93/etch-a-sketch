@@ -42,8 +42,8 @@ h1 {
 }
 
 .game-board {
-  width: 65vh;
-  min-height: 75vh;
+  width: 500px;
+  min-height: 500px;
   background-color: white;
   align-self: center;
   display: flex;
@@ -51,10 +51,9 @@ h1 {
 }
 
 /* Game Board */
-.cell {
-  border: 1px;
-  border-color: var(--border);
+.cell.reset{
   margin: 0px;
+  background-color: white;
 }
 
 /* Footer */
