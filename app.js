@@ -1,8 +1,13 @@
-// Initial Grid Creation
+// Initial DOM Retrieval and Manipulation
 const container = document.querySelector(".game-board");
+const gameOptions = document.querySelector(".game-options")
+const slider = document.querySelector(".slider");
+const sliderValue = document.createElement("div");
+sliderValue.classList.add("slider-value");
+sliderValue.innerText = slider.value;
+gameOptions.insertBefore(sliderValue,slider);
 
-createGrid(16);
-colorCells("black");
+
 
 function createGrid (size) {
   boxes = size ** 2;
@@ -23,3 +28,7 @@ function colorCells (color) {
     })
   })
 }
+
+
+createGrid(16);
+colorCells("black");
