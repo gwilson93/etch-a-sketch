@@ -1,6 +1,9 @@
 // Initial DOM Retrieval and Manipulation
 const container = document.querySelector(".game-board");
 const gameOptions = document.querySelector(".game-options")
+const clrBtn = document.querySelector(".clear");
+
+
 const slider = document.querySelector(".slider");
 const sliderValue = document.createElement("div");
 sliderValue.classList.add("slider-value");
@@ -29,6 +32,19 @@ function colorCells (color) {
   })
 }
 
+
+function clearGrid() {
+    while (container.firstChild) {
+      container.removeChild(container.lastChild);
+    }
+
+}
+
+// Event Listeners
+clrBtn.addEventListener("click",() => {
+  clearGrid();
+  createGrid(16);
+})
 
 createGrid(16);
 colorCells("black");
