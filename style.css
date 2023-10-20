@@ -30,7 +30,7 @@ h1 {
   font-size: 75px;
 }
 
-/* Container / Game Element */
+/* Board Layout with Options */
 .container {
   display: flex;
   justify-content: center;
@@ -46,8 +46,15 @@ h1 {
   min-height: 75vh;
   background-color: white;
   align-self: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Options */
+/* Game Board */
+.cell {
+  border: 1px;
+  border-color: var(--border);
+  margin: 0px;
+}
 
 /* Footer */
