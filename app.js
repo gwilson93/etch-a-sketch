@@ -56,6 +56,10 @@ function clearGrid () {
 
 
 // Event Listeners
+colorBtn.addEventListener("click",() => {
+  colorCells("color");
+})
+
 rainbowBtn.addEventListener("click",() => {
   colorCells("rainbow");
 })
@@ -66,11 +70,13 @@ eraserBtn.addEventListener("click",() => {
 
 clrBtn.addEventListener("click",() => {
   clearGrid();
-  createGrid(16);
-  colorCells("black");
+  createGrid(DEFAULT_SIZE);
+  colorCells(DEFAULT_COLOR);
 })
 
 
-
-createGrid(16);
-colorCells("black");
+// Default Load
+window.addEventListener("load", () => {
+  createGrid(DEFAULT_SIZE);
+  colorCells(DEFAULT_COLOR);
+})
