@@ -9,6 +9,7 @@ const colorBtn = document.querySelector(".color-select");
 const rainbowBtn = document.querySelector(".rainbow-select");
 const eraserBtn = document.querySelector(".eraser");
 const clrBtn = document.querySelector(".clear");
+const colorpicker = document.querySelector(".colorpicker");
 
 
 // Slider Configuration
@@ -31,7 +32,7 @@ function createGrid (size) {
   }
 }
 
-function colorCells (toggle,currentColor) {
+function colorCells (toggle) {
   const allCells = document.querySelectorAll(".cell");
   allCells.forEach((cell) => {
     cell.addEventListener("mouseover",() =>{
@@ -39,6 +40,7 @@ function colorCells (toggle,currentColor) {
         cell.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
       }
       else if (toggle == "color") {
+        currentColor = colorpicker.value;
         cell.style.background = currentColor;
       }
       else {
