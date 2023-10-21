@@ -16,8 +16,13 @@ const colorpicker = document.querySelector(".colorpicker");
 const slider = document.querySelector(".slider");
 const sliderValue = document.createElement("div");
 sliderValue.classList.add("slider-value");
-sliderValue.innerText = slider.value;
-gameOptions.insertBefore(sliderValue,slider);
+slider.addEventListener("input", () =>{
+  sliderValue.innerText = slider.value + " x " + slider.value;
+  gameOptions.insertBefore(sliderValue,slider);
+  clearGrid()
+  createGrid(slider.value);
+  colorCells(DEFAULT_COLOR);
+})
 
 
 // Helper Functions
