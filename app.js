@@ -1,4 +1,6 @@
 // Set Default Values
+DEFAULT_COLOR = "black";
+DEFAULT_SIZE = 16;
 
 // Initial DOM Retrieval and Manipulation
 const container = document.querySelector(".game-board");
@@ -29,15 +31,15 @@ function createGrid (size) {
   }
 }
 
-function colorCells (toggle,colorSelect) {
+function colorCells (toggle,currentColor) {
   const allCells = document.querySelectorAll(".cell");
   allCells.forEach((cell) => {
     cell.addEventListener("mouseover",() =>{
-      if (toggle === "rainbow") {
-        cell.style.background = Math.floor(Math.random()*16777215).toString(16);
+      if (toggle == "rainbow") {
+        cell.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
       }
-      else if (toggle === "color") {
-        cell.style.background = colorSelect;
+      else if (toggle == "color") {
+        cell.style.background = currentColor;
       }
       else {
         cell.style.background = toggle;
@@ -59,7 +61,7 @@ rainbowBtn.addEventListener("click",() => {
 })
 
 eraserBtn.addEventListener("click",() => {
-  colorCells("black");
+  colorCells("white");
 })
 
 clrBtn.addEventListener("click",() => {
